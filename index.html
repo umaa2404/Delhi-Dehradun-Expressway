@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Delhi Dehradun Expressway Route Finder</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <button class="mode" onclick="toggleMode()">🌙 Dark Mode</button>
+
+    <!-- Hero Section -->
+
+    <div class="hero">
+      <img src="highway.jpg" alt="Expressway Highway" />
+
+      <div class="hero-text">
+        <h1>🚗 Delhi - Dehradun Expressway</h1>
+
+        <p>Smart Route Finder</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Search Card -->
+
+      <div class="card">
+        <h2>🔍 Find Your Route</h2>
+
+        <div class="input-box">
+          <label> 📍 Source City </label>
+
+          <select id="source">
+            <option value="">Select Source</option>
+          </select>
+        </div>
+
+        <button class="swap-btn" onclick="swapRoute()">🔄 Swap Route</button>
+
+        <div class="input-box">
+          <label> 🏁 Destination City </label>
+
+          <select id="destination">
+            <option value="">Select Destination</option>
+          </select>
+        </div>
+
+        <button onclick="findRoute()">Find Route 🚗</button>
+      </div>
+
+      <!-- Result -->
+
+      <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

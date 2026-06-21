@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+  background: #eef2f3;
+
+  transition: 0.4s;
+}
+
+/* Hero */
+
+.hero {
+  height: 350px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-text {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: white;
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 45px;
+}
+
+.hero-text p {
+  font-size: 22px;
+
+  margin-top: 10px;
+}
+
+/* Container */
+
+.container {
+  width: 90%;
+
+  max-width: 900px;
+
+  margin: 40px auto;
+}
+
+/* Card */
+
+.card {
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.input-box {
+  margin: 20px 0;
+}
+
+label {
+  font-size: 18px;
+
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 10px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  background: #ff9800;
+
+  color: white;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #ff5722;
+}
+
+.swap-btn {
+  background: #2196f3;
+}
+
+.mode {
+  position: fixed;
+
+  right: 20px;
+
+  top: 20px;
+
+  width: 150px;
+
+  z-index: 10;
+
+  background: black;
+}
+
+/* Result */
+
+.result-box {
+  margin-top: 30px;
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 25px;
+}
+
+.result-box h2 {
+  margin-bottom: 20px;
+}
+
+/* Summary Cards */
+
+.summary-container {
+  display: flex;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  flex: 1;
+
+  background: #ff9800;
+
+  color: white;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+.summary-card h3 {
+  font-size: 18px;
+}
+
+.summary-card p {
+  font-size: 25px;
+
+  font-weight: bold;
+
+  margin-top: 10px;
+}
+
+/* Route */
+
+.city {
+  background: #dff6ff;
+
+  padding: 15px;
+
+  margin: 10px 0;
+
+  border-radius: 12px;
+
+  font-weight: bold;
+
+  color: #222;
+}
+
+.road {
+  height: 60px;
+
+  border-left: 4px dashed gray;
+
+  margin-left: 30px;
+
+  font-size: 35px;
+
+  animation: moveCar 2s infinite;
+}
+
+@keyframes moveCar {
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+/* Dark Mode */
+
+.dark {
+  background: #121212;
+
+  color: white;
+}
+
+.dark .card,
+.dark .result-box {
+  background: #1f1f1f;
+
+  color: white;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark p,
+.dark label {
+  color: white;
+}
+
+.dark .city {
+  background: #333;
+
+  color: white;
+}
+
+.dark .info {
+  color: white;
+}
+
+.dark select {
+  background: #333;
+
+  color: white;
+}
+
+.dark option {
+  background: #333;
+
+  color: white;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .summary-container {
+    flex-direction: column;
+  }
+}
